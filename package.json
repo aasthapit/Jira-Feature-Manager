@@ -1,0 +1,14 @@
+{
+  "name": "jira-feature-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trello-style board (grouped by Jira labels) served via GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "build": "node --env-file=.env scripts/build.js",
+    "serve": "node --env-file=.env scripts/serve.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

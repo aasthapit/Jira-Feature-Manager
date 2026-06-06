@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-06-06T00:00:00.000Z",
+  "jiraBaseUrl": "https://your-org.atlassian.net",
+  "jql": "SAMPLE DATA — run `npm run build` to replace this",
+  "totalIssues": 3,
+  "columns": [
+    {
+      "label": "frontend",
+      "issues": [
+        {
+          "key": "FEAT-1",
+          "summary": "Sample card — run npm run build to load real Jira data",
+          "status": "In Progress",
+          "statusCategory": "indeterminate",
+          "issuetype": "Story",
+          "priority": "Medium",
+          "assignee": "Sample User",
+          "assigneeAvatar": null,
+          "updated": "2026-06-06T00:00:00.000Z",
+          "labels": ["frontend"],
+          "url": "https://your-org.atlassian.net/browse/FEAT-1"
+        }
+      ]
+    },
+    {
+      "label": "backend",
+      "issues": [
+        {
+          "key": "FEAT-2",
+          "summary": "Another sample card grouped under the 'backend' label",
+          "status": "To Do",
+          "statusCategory": "new",
+          "issuetype": "Task",
+          "priority": "High",
+          "assignee": null,
+          "assigneeAvatar": null,
+          "updated": "2026-06-06T00:00:00.000Z",
+          "labels": ["backend"],
+          "url": "https://your-org.atlassian.net/browse/FEAT-2"
+        }
+      ]
+    },
+    {
+      "label": "Uncategorized",
+      "issues": [
+        {
+          "key": "FEAT-3",
+          "summary": "Issues with no labels land in Uncategorized",
+          "status": "Done",
+          "statusCategory": "done",
+          "issuetype": "Bug",
+          "priority": "Low",
+          "assignee": "Sample User",
+          "assigneeAvatar": null,
+          "updated": "2026-06-06T00:00:00.000Z",
+          "labels": [],
+          "url": "https://your-org.atlassian.net/browse/FEAT-3"
+        }
+      ]
+    }
+  ]
+}
