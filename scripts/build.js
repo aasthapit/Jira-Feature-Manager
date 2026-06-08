@@ -119,7 +119,7 @@ function buildColumns(issues) {
     .map((label) => ({ label, issues: byLabel.get(label) }));
 
   if (uncategorized.length) {
-    columns.push({ label: "Uncategorized", issues: uncategorized });
+    columns.push({ label: "Uncategorized", uncategorized: true, issues: uncategorized });
   }
   return columns;
 }

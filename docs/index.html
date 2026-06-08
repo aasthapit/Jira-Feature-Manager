@@ -10,7 +10,12 @@
     <header class="topbar">
       <h1>Feature Board</h1>
       <div class="meta">
+        <form id="add-column-form" class="add-column hidden">
+          <input id="add-column-input" type="text" placeholder="New column (label)…" aria-label="New column label" />
+          <button type="submit">+ Column</button>
+        </form>
         <input id="search" type="search" placeholder="Filter cards…" aria-label="Filter cards" />
+        <span id="edit-badge" class="badge hidden" title="Running locally — drag cards to change Jira labels">● Edit mode</span>
         <span id="updated" class="updated"></span>
       </div>
     </header>

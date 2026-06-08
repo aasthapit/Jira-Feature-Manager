@@ -36,6 +36,26 @@ Jira  ──(npm run build, uses .env token)──▶  docs/board.json  ──(g
    npm run serve     # http://localhost:8080
    ```
 
+## Editing labels by drag-and-drop (local only)
+
+When you run `npm run serve`, the board runs in **edit mode**:
+
+- **Drag a card** from one column to another. On drop, the local server calls Jira to
+  **remove the source column's label** and **add the target column's label** on that issue.
+- **Add a column** with the "+ Column" box (top right). Type a label name (no spaces) and
+  drop a card onto it — Jira creates the label automatically.
+- **Uncategorized** is the "no label" bucket: dropping *onto* it just removes the source
+  label; dragging *out of* it just adds the target label.
+- A green **● Edit mode** badge confirms write-back is active.
+
+This only works locally because your Jira token lives in `.env` on your machine. The public
+GitHub Pages site has no write API, so it automatically stays a **read-only** view (no badge,
+no dragging). After making changes, run `npm run build` again to re-sync the board with Jira,
+then commit & push to update the published view.
+
+> Drag-to-relabel changes labels immediately in Jira, but the *board JSON* only refreshes when
+> you run `npm run build`. So locally the card moves optimistically; re-build to reconcile.
+
 ## Publishing to GitHub Pages
 
 1. Create a repo on GitHub and push this folder (see commands below).

@@ -145,6 +145,59 @@ body {
 .card.hidden { display: none; }
 .column.hidden { display: none; }
 
+/* ---- Edit mode ---- */
+.hidden { display: none !important; }
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--done);
+  background: rgba(54, 179, 126, 0.14);
+  padding: 3px 9px;
+  border-radius: 12px;
+}
+
+.add-column { display: flex; gap: 6px; }
+.add-column input {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  width: 160px;
+}
+.add-column button {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.add-column button:hover { background: var(--col-bg); }
+
+/* draggable affordances */
+.editable .card { cursor: grab; }
+.card.dragging { opacity: 0.4; }
+.column.drag-over { outline: 2px dashed var(--indeterminate); outline-offset: -2px; }
+.card.saving { opacity: 0.5; pointer-events: none; }
+
+.toast {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #172b4d;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 14px rgba(9, 30, 66, 0.3);
+  z-index: 100;
+  max-width: 80vw;
+}
+.toast.error { background: #bf2600; }
+
 .error {
   margin: 20px;
   padding: 16px;
